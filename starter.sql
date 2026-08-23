@@ -1,0 +1,34 @@
+-- RDBMS Assignment: Department and Student Tables
+--
+-- Task:
+-- 1. Create a database named CollegeDB.
+-- 2. Create a Department table with:
+--    DepartmentID INT PRIMARY KEY
+--    DepartmentName VARCHAR(50)
+--
+-- 3. Create a Student table with:
+--    StudentID INT PRIMARY KEY
+--    StudentName VARCHAR(50)
+--    DepartmentID INT
+--    DepartmentID must be a FOREIGN KEY referencing
+--    Department(DepartmentID).
+--
+-- 4. Insert the following records into Department:
+--    101, Computer Science
+--    102, Mathematics
+--    103, Physics
+--
+-- 5. Insert the following records into Student:
+--    1001, Arun, 101
+--    1002, Divya, 102
+--    1003, Karthik, 101
+--    1004, Nisha, 103
+--
+-- 6. Write an INNER JOIN query to display:
+--    StudentName and DepartmentName
+--    by joining the Student and Department tables.
+--
+-- Save your completed SQL program as answer.sql.
+
+
+-- Write your SQL statements below:
