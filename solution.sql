@@ -1,22 +1,10 @@
-CREATE TABLE Department (
-    DepartmentID numeric(10) PRIMARY KEY,
-    DepartmentName VARCHAR(20)
-);
-
-INSERT INTO Department
-VALUES (101,'Computer Science');
-INSERT INTO Department
-VALUES (102,'Mathematics');
-INSERT INTO Department
-VALUES (103,'Physics');
-
-CREATE TABLE Student(
-    StudentID numeric(10),
-    StudentName VARCHAR(10),
-    DepartmentID numeric(10),
-    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
-);
-
+DROP DATABASE IF EXISTS COllageDB;
+CREATE DATABASE CollageDB;
+USE CollageDB;
+CREATE TABLE Student(StudentID numeric(10),
+                     StudentName VARCHAR(10),
+                     DepartmentID VARCHAR(10)
+                     );
 INSERT INTO Student
 VALUES (1001,'ARUN',101);
 INSERT INTO Student
@@ -25,10 +13,20 @@ INSERT INTO Student
 VALUES (1003,'KARTHIK',101);
 INSERT INTO Student
 VALUES (1004,'NISHA',103);
-
+CREATE TABLE Department (DepartmentID numeric(10),DepartmentName VARCHAR(20)
+                         );
+INSERT INTO Department
+VALUES (101,'Computer Science');
+INSERT INTO Department
+VALUES (102,'Mathematics');
+INSERT INTO Department
+VALUES (103,'Physics');
 SELECT
     Student.StudentName,
     Department.DepartmentName
 FROM Student
 INNER JOIN Department
 ON Student.DepartmentID = Department.DepartmentID;
+
+
+
