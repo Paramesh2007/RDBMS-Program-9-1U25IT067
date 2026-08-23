@@ -1,6 +1,3 @@
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
-
 CREATE TABLE Department (
     DepartmentID numeric(10) PRIMARY KEY,
     DepartmentName VARCHAR(20)
