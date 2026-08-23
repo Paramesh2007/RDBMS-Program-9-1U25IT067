@@ -1,9 +1,9 @@
 DROP DATABASE IF EXISTS COllageDB;
 CREATE DATABASE CollageDB;
 USE CollageDB;
-CREATE TABLE Student(StudentID numeric(10),
+CREATE TABLE Student(StudentID numeric(10)PRIMARY KEY,
                      StudentName VARCHAR(10),
-                     DepartmentID VARCHAR(10)
+                     DepartmentID INT(10)PRIMARY KEY
                      );
 INSERT INTO Student
 VALUES (1001,'ARUN',101);
